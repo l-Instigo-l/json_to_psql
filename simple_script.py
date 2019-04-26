@@ -19,7 +19,7 @@ def json_to_psql():
 	Origin = data['Origin']
 	Destination = data['Destination']
 	Departure_date = data['Departure_Date']
-	Customers_data = json.dumps(data['Customers_data'])
+	Customers_data = json.dumps(data['Customers_data']) # Данные в Customers_datа, в данном случае, так же являются json-обьектом
 
 	db.execute("INSERT INTO test_table (origin, destination, departure_date, customers_data) VALUES (:origin, :destination, :departure_date, :customers_data)", {"origin": Origin, "destination": Destination, "departure_date": Departure_date, "customers_data": Customers_data})
 	db.commit()
