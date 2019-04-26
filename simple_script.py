@@ -21,8 +21,6 @@ def json_to_psql():
 	Departure_date = data['Departure_Date']
 	Customers_data = json.dumps(data['Customers_data'])
 
-	print(Origin, Destination, Departure_date, Customers_data)
-
 	db.execute("INSERT INTO test_table (origin, destination, departure_date, customers_data) VALUES (:origin, :destination, :departure_date, :customers_data)", {"origin": Origin, "destination": Destination, "departure_date": Departure_date, "customers_data": Customers_data})
 	db.commit()
 
