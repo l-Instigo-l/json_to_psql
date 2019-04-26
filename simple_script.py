@@ -4,7 +4,7 @@ import requests
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-engine = create_engine('postgresql://postgres:skyline92@localhost/postgres')
+engine = create_engine('postgresql://username:password@localhost/postgres')
 db = scoped_session(sessionmaker(bind=engine))
 
 def json_to_psql():
