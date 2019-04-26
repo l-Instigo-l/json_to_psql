@@ -36,7 +36,7 @@ def psql_to_json(id):
 	d = { "Origin": Origin, "Destination": Destination, "Departure_Date" : Departure_date, "Customers_data": Customers_data}
 	json_data = json.dumps(d)
 
-	# Отправляем post-request и сохраняем ответ сервера
+	# Отправляем через post и сохраняем ответ сервера
 	r = requests.post(url = API_ENDPOINT, data = json_data) 
 
 
