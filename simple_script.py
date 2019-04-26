@@ -26,7 +26,6 @@ def json_to_psql():
 
 def psql_to_json(id):
 	# Выбор строки таблицы осуществляется по id
-	
 	data = db.execute("SELECT * FROM test_table WHERE id = :id ", {"id": id}).fetchone()
 
 	Origin = data.origin
