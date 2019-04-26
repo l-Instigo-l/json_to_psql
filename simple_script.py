@@ -9,7 +9,7 @@ db = scoped_session(sessionmaker(bind=engine))
 
 def json_to_psql():
 	# Получение json через api
-	#json_data = requests.get("http://url-to-api")
+	#json_data = requests.get("http://url-api-endpoint")
 	#data = json_data.json()
 
 	# Чтение json из файла
